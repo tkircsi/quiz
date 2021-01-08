@@ -80,8 +80,9 @@ func shuffle(problems *[]problem) {
 	l := len(*problems) - 1
 
 	for i := 0; i < 10; i++ {
-		r := rand.Intn(l)
-		(*problems)[r], (*problems)[l-r] = (*problems)[l-r], (*problems)[r]
+		r1 := rand.Intn(l)
+		r2 := rand.Intn(l)
+		(*problems)[r1], (*problems)[r2] = (*problems)[r2], (*problems)[r1]
 	}
 }
 
